@@ -306,7 +306,7 @@ export default function ClientsPage() {
                     Check Online Clients Status
                   </button>
                 )}
-              <ClientsTable clients={tableClients} onUpdate={fetchClients} />
+              <RCSClientsTable clients={tableClients} onUpdate={fetchClients} />
             </CardContent>
           </Card>
         </>
@@ -314,9 +314,7 @@ export default function ClientsPage() {
     </div>
     
   )
-  if (userRole === "ercs") {
-  return <ErcsLayout>{content}</ErcsLayout>
-}
+  
 
 return content
 }

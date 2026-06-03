@@ -29,7 +29,7 @@ existingSnap.forEach(doc => {
   const cmd = doc.data()
 
   if (
-    cmd.queryId === "kvshJ7oJ4x8GXgZOi950" &&
+    cmd.queryId === "Rus3edKqXIuifPXvXO9q" &&
     cmd.createdAt?.toDate() >= today
   ) {
     alreadyExecutedToday = true
@@ -43,7 +43,7 @@ if (alreadyExecutedToday) continue
         clientId,
         status: "pending",
         createdAt: FieldValue.serverTimestamp(), // 🔴 IMPORTANT
-        queryId: "kvshJ7oJ4x8GXgZOi950",
+        queryId: "Rus3edKqXIuifPXvXO9q",
         variables: {
           Fromdate: new Date().toISOString().split("T")[0],
         },

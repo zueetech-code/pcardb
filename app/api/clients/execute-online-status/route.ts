@@ -63,7 +63,7 @@ export async function GET() {
         clientId,
         status: "pending",
         createdAt: FieldValue.serverTimestamp(),
-        queryId: "kvshJ7oJ4x8GXgZOi950",
+        queryId: "Rus3edKqXIuifPXvXO9q",
         variables: { Fromdate: todayStr },
       })
 
@@ -71,7 +71,7 @@ export async function GET() {
       const commandsSnap = await adminDb
         .collection("commands")
         .where("clientId", "==", clientId)
-        .where("queryId", "==", "kvshJ7oJ4x8GXgZOi950")
+        .where("queryId", "==", "Rus3edKqXIuifPXvXO9q")
         .where("status", "==", "success")
         .orderBy("createdAt", "desc")
         .limit(1)
