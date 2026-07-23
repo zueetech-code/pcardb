@@ -247,6 +247,14 @@ ON report_insert_log (client_name, sds_code, report_date);
 ALTER TABLE report_insert_log
 ADD COLUMN submission_type VARCHAR(20) DEFAULT 'FIRST';
 
+SELECT pg_terminate_backend(pid)
+FROM pg_stat_activity
+WHERE state = 'idle'
+  AND pid <> pg_backend_pid();
+
+  SELECT count(*) FROM pg_stat_activity;
+  SHOW max_connections;
+
 
 
 
